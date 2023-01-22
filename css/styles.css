@@ -1,0 +1,200 @@
+body{
+  font-family: Montserrat;
+  text-align: center;/*we are writing this here bcoz we have used it many times in differnt elements, so this is better to use and u can remove other*/
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Montserrat-bold";
+}
+/*4pillars of good web design-typography,uidesign,ux design,colour theory
+color theory,what diff colors can specify? red-love,energy,intensity: yellow- joy,intellect,attention: green-growth,sreshness,safety: blue-stability,trust,serenity: purple-wealth,royality,femininity
+ui dsign factors- hiearchy, layout, audience,white space, alignment, borders
+ux design- simplicity, consistency, reading pattern Flayout,all platform responsiveness, ads checkboxes etc */
+/*
+h1{
+  font-family: "Montserrat-black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+h2{
+  font-family: Montserrat bold;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+h3{
+  font-family: Montserrat bold;
+  font-size: 1.5rem;
+}
+We can remove these h1,h2,h3 styling bcoz everything now is included in the big-heading, section-heading as well as in combined form too*/
+p{
+  color: #8f8f8f;
+}
+#title{
+  background-color: #ff4c68;
+  color: #fff;
+  text-align: left;
+}
+.big-heading{
+  font-family: "Montserrat-black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+.section-heading{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.container-fluid{
+  padding: 7% 15% ;
+}
+
+/*Sections*/
+.colored-section{
+  background-color: #ff4c68;
+  color: #fff;
+}
+.white-section{
+    background-color: #fff;
+}
+/*Navigation bar*/
+.navbar{
+  padding-bottom: 4.5rem;
+}
+.navbar-brand{
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.nav-item{
+  padding: 0 12px;
+}
+.nav-link{
+  font-weight: lighter;
+  font-size: 1.2rem;
+  font-family: Montserrat;
+}
+/*download buttons*/
+.download-button{
+  margin: 5% 3% 5% 0;
+}
+/*title section*/
+
+#title .container-fluid{
+  padding: 3% 15% 7%;
+  text-align: left;
+}/*specific only to title ke andar wala container-fluid, so it will override the main container-fluid id*/
+/*proirity wise, highest priority to id, then class and then element, changes uske according hoyenge*/
+/*title-image*/
+.title-image{
+  width: 20%;
+  transform: rotate(20deg);
+  position: absolute;
+  right: 20%;
+}
+/*once again see the z index video and check the code here*/
+
+/*features section*/
+#features{
+  /*padding: 7% 15%;no need now due to container-fluid*/
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.feature-title{
+    font-size: 1.5rem;
+}
+/*Z index is important in styling, but it works only if we have positioned the element like absolute,relative etc. it don't work on static
+ which is the default positioning. also all the elemnets have default z index value as 0.
+ used in stacking order, tell us which item needs to be displayed behind which*/
+.feature-box{
+  /*text-align: center;no need now as it is mentioned in the body*/
+  padding: 5%;
+}
+.icon{
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+.icon:hover{
+  color: #ff4c68;
+}
+/*Testimonials Sections*/
+#testimonials{
+  /*text-align: center;no need now as it is mentioned in the body*/
+  background-color: #ef8172;
+  color: #fff;
+}
+.testimonial-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.testimonial-image{
+  width: 20%;
+  border-radius: 100%;
+  margin: 20px;
+}
+#press{
+  background-color: #ef8172;
+  /*text-align: center;no need now as it is mentioned in the body*/
+padding-bottom: 3%;
+}
+.press-logo{
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+/*.carousel-item{
+    padding: 7% 15%;
+}delete this now due to container fluid*/
+
+/*pricing section*/
+#pricing{
+  padding: 100px;
+  /*text-align: center;no need now as it is mentioned in the body*/
+}
+.price-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.pricing-column{
+  padding: 3% 2%;
+}
+/*CTA section*/
+/*no need of this code completely now due to colored-Sections
+#cta{
+  background-color: #ff4c68;
+  color: #fff;
+  /*padding: 7% 15%;no need now due to container-fluid
+  text-align: center;no need now as it is mentioned in the body
+}*/
+/*.cta-heading{/*same as big-heading now
+  font-family: "Montserrat black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+
+}
+*/
+/*@media <type><feature>  it is a very great tool used in place of bootstrap, responsible for making responsive websites
+makes it look better for different screens, also we can add special properties on speccial occasions
+@media print{ <h1>hello world</h1> suppose in css also we have given h1 as red color, so when we write this code, simply on the
+website the color of hello world will be black as default, but when we print that, it will be red due to media query}
+similarly @media(max-width 900px){hello world} will apply to all the sizes less than 900px
+check difference between screen, display, browser and viewport*/
+ @media(max-width: 992px){
+    #title{
+      /*text-align: center; sorry you can't make media query work from the body,spl case, so u need to mention it */
+      text-align: center;
+    }
+    .title-image{
+      position: static;
+      transform: rotate(0);
+    }
+  }
+  /*footer section*/
+  /*
+  #footer{
+    padding: 7% 15%; no need now due to container-fluid
+    text-align: center;no need now as it is mentioned in the body
+  }
+
+  */
+  .social-icon{
+    margin: 20px 10px;
+  }
